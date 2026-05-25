@@ -1,0 +1,116 @@
+POST http://localhost:3000/api/chat
+Content-Type: application/json
+
+{
+  "userMessage": "Punggungku pegal habis duduk lama",
+  "chatHistory": []
+}
+
+
+###
+POST http://localhost:3000/api/chat
+Content-Type: application/json
+
+{
+  "userMessage": "Kalau yang lebih lembut ada?",
+  "chatHistory": [
+    {
+      "id": "1",
+      "role": "user",
+      "type": "chat",
+      "content": "Punggungku pegal habis duduk lama"
+    },
+    {
+      "id": "2",
+      "role": "assistant",
+      "type": "recommendation",
+      "content": "Ini treatment yang cocok",
+      "treatments": [
+        {
+          "kode": "J1",
+          "alasan": "Cocok untuk pegal punggung"
+        }
+      ]
+    }
+  ]
+}
+
+
+
+
+
+###
+POST http://localhost:3000/api/chat
+Content-Type: application/json
+
+{
+  "userMessage": "yang lebih lembut ada? kayaknya aku tertarik",
+  "chatHistory": [
+    {
+      "id": "1",
+      "role": "user",
+      "type": "chat",
+      "content": "Punggungku pegal habis duduk lama"
+    },
+    {
+      "id": "2",
+      "role": "assistant",
+      "type": "chat",
+      "content": "Halo, aku Thera 👋 Thera melihat keteganganmu kemungkinan berasal dari otot punggung yang terlalu lama menahan posisi duduk. Pegalnya lebih terasa ringan atau cukup mengganggu?"
+    },
+    {
+      "id": "3",
+      "role": "user",
+      "type": "chat",
+      "content": "lumayan pegal sih tapi aku gak mau yang terlalu keras"
+    },
+    {
+      "id": "4",
+      "role": "assistant",
+      "type": "chat",
+      "content": "Kalau begitu Thera lebih menyarankan treatment dengan tekanan lembut atau normal supaya otot tetap rileks tanpa terasa terlalu sakit."
+    }
+  ]
+}
+
+
+
+###
+POST http://localhost:3000/api/chat
+Content-Type: application/json
+
+{
+  "userMessage": "oke aku mau yang J1 aja deh",
+  "chatHistory": [
+    {
+      "id": "1",
+      "role": "user",
+      "type": "chat",
+      "content": "Punggungku pegal habis duduk lama"
+    },
+    {
+      "id": "2",
+      "role": "assistant",
+      "type": "chat",
+      "content": "Halo, aku Thera 👋 Thera melihat keteganganmu kemungkinan berasal dari otot punggung yang terlalu lama menahan posisi duduk."
+    },
+    {
+      "id": "3",
+      "role": "user",
+      "type": "chat",
+      "content": "aku gak mau yang terlalu keras"
+    },
+    {
+      "id": "4",
+      "role": "assistant",
+      "type": "chat",
+      "content": "Kalau begitu Thera lebih menyarankan treatment dengan tekanan lembut agar tubuh tetap nyaman."
+    },
+    {
+      "id": "5",
+      "role": "user",
+      "type": "chat",
+      "content": "yang lebih lembut ada?"
+    }
+  ]
+}
