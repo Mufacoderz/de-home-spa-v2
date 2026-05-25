@@ -4,7 +4,6 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion";
-import TheraButton from "../Reservasi/TheraButton";
 
 export default function Hero() {
     return (
@@ -76,7 +75,12 @@ export default function Hero() {
                         }}
                         className=" mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6 md:mt-12"
                     >
-                                    <TheraButton />
+                        <Link
+                            href="#reservasi-ai"
+                            className=" font-poppins rounded-full bg-[#B35811] px-7 py-3.5 text-center text-base font-semibold text-primary-foreground transition-all duration-300 hover:scale-105  md:px-9 md:py-4 md:text-xl "
+                        >
+                            Rekomendasi AI
+                        </Link>
                         
 
                         <Link

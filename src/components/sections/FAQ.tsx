@@ -18,7 +18,7 @@ export default function FAQ() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
 
           {/* IMAGE */}
-          <div className="relative w-full h-[500px] rounded-3xl overflow-hidden">
+          <div className="relative w-full h-125 rounded-3xl overflow-hidden">
             <Image
               src={faq}
               alt="FAQ Spa"

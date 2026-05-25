@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import TheraLoadingScreen from "../../features/Chatbot/TheraLoadingScreen";
+import TheraLoadingScreen from "../../shared/TheraLoadingScreen";
 
 export default function TheraButton() {
   const router = useRouter();

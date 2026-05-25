@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { ArrowLeft, SendHorizontal, Loader2 } from "lucide-react";
 import ChatBubble from "./ChatBubble";
 import RecommendationCard from "./RecommendationCard";
-import TheraLoadingScreen from "./TheraLoadingScreen";
+import TheraLoadingScreen from "../../shared/TheraLoadingScreen";
 import TypingIndicator from "./TypingIndicator";
 import Image from "next/image";
 import iconCoklat from "@/public/images/logo-coklat.png";
@@ -174,10 +174,10 @@ export default function ChatShell() {
                     </div>
 
                     <div className="flex-1">
-                        <h1 className="font-playfair text-2xl font-bold leading-none text-[#603E00]">
+                        <h1 className="font-playfair text-2xl font-bold leading-none text-main">
                             Thera AI
                         </h1>
-                        <p className="mt-1 font-poppins text-xs text-[#8B6B52]">
+                        <p className="mt-1 font-poppins text-xs text-second">
                             Online • Konsultasi treatment de HOME SPA
                         </p>
                     </div>

@@ -197,3 +197,43 @@
 }
 
 
+
+
+/* =========================
+   CUSTOM SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF9EF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    #D9A441,
+    #8B6B52
+  );
+
+  border-radius: 999px;
+  border: 2px solid #FFF9EF;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    #BD8622,
+    #603E00
+  );
+}
+
+/* Firefox */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #8B6B52 #FFF9EF;
+}

@@ -1,4 +1,4 @@
-import ButtonReservasi from "@/components/ui/ButtonReservasi";
+import ButtonReservasi from "@/components/shared/ButtonReservasi";
 import TheraButton from "@/components/sections/Reservasi/TheraButton";
 import reservasiImage from "@/public/images/reservasiImg.png";
 import Image from "next/image";
@@ -6,7 +6,7 @@ import { Sparkles } from "lucide-react";
 
 export default function ReservasiAI() {
   return (
-    <section className="w-full py-10">
+    <section id="reservasi-ai" className="w-full py-10">
       <div className="reservasi-ai flex flex-col items-center justify-between gap-10 rounded-[15px] border border-[#D9D9D9] bg-[#FDF5E6] px-8 py-10 shadow-md md:px-12 md:py-14 lg:flex-row">
         <div className="kiri w-full lg:w-[55%]">
           <div className="mb-8 inline-flex items-center gap-3 rounded-[15px] border-2 border-[#E0A11B] bg-[#FFF1D6] px-5 py-3">
