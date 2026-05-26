@@ -185,7 +185,7 @@ export default function ChatShell() {
     }
 
     return (
-        <main className="min-h-screen bg-thera px-0 py-0 sm:px-4 sm:py-5">
+        <main className="min-h-screen bg-thera px-0  sm:px-4 ">
             {leaving && (
                 <TheraLoadingScreen
                     title="Thera AI"

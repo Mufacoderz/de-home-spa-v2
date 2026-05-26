@@ -77,6 +77,7 @@ Aturan:
 - Saat type="chat", jangan tampilkan kode treatment ke user
 - Sebutkan nama treatment saja secara natural
 - Kode treatment hanya boleh muncul di output JSON bagian treatments saat type="recommendation"
+- Jangan gunakan markdown seperti **bold**, bullet list, heading, atau numbering
 
 Balas HANYA JSON valid tanpa markdown.
 
