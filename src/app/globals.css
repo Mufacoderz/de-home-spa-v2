@@ -51,12 +51,17 @@
 }
 
 :root {
-  --main-bg: #FFF9EF;
-  --second-bg: #E8D0A4;
+  --main-bg: #fff9ef;
+  --second-bg: #e8d0a4;
   --ternary-bg: #603e00;
   --main-text: #603e00;
   --secondary-text: #8b6b52;
   --ternary-text: #fdf5e6;
+  --thera-bg: #fdf5e6;
+  --thera-surface: #fff9ef;
+  --thera-border: #e8d0a4;
+  --thera-accent: #8b6b52;
+  --thera-gold: #bd8622;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -126,31 +131,49 @@
 }
 
 @layer utilities {
+  .bg-main {
+    background-color: var(--main-bg);
+  }
 
-    .bg-main {
-        background-color: var(--main-bg);
-    }
+  .bg-second {
+    background-color: var(--second-bg);
+  }
 
-    .bg-second{
-      background-color: var(--second-bg);
-    }
+  .bg-ternary {
+    background-color: var(--ternary-bg);
+  }
 
-    .bg-ternary{
-      background-color: var(--ternary-bg)
-    }
+  .text-main {
+    color: var(--main-text);
+  }
 
-    .text-main {
-        color: var(--main-text);
-    }
+  .text-second {
+    color: var(--secondary-text);
+  }
 
-    .text-second {
-        color: var(--secondary-text);
-    }
+  .text-ternary {
+    color: var(--ternary-text);
+  }
 
-    .text-ternary{
-      color: var(--ternary-text)
-    }
+  .bg-thera {
+    background-color: var(--thera-bg);
+  }
 
+  .bg-thera-surface {
+    background-color: var(--thera-surface);
+  }
+
+  .border-thera {
+    border-color: var(--thera-border);
+  }
+
+  .text-thera {
+    color: var(--thera-accent);
+  }
+
+  .text-thera-gold {
+    color: var(--thera-gold);
+  }
 }
 
 @layer base {
@@ -166,7 +189,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
   }
 
@@ -185,19 +209,21 @@
   }
 }
 
-
 @keyframes shine {
-  0%   { left: -120%; }
-  60%  { left: 130%; }
-  100% { left: 130%; }
+  0% {
+    left: -120%;
+  }
+  60% {
+    left: 130%;
+  }
+  100% {
+    left: 130%;
+  }
 }
 
 .shine-auto {
   animation: shine 2.5s ease-in-out infinite;
 }
-
-
-
 
 /* =========================
    CUSTOM SCROLLBAR
@@ -209,31 +235,23 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #FFF9EF;
+  background: #fff9ef;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    to bottom,
-    #D9A441,
-    #8B6B52
-  );
+  background: linear-gradient(to bottom, #d9a441, #8b6b52);
 
   border-radius: 999px;
-  border: 2px solid #FFF9EF;
+  border: 2px solid #fff9ef;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(
-    to bottom,
-    #BD8622,
-    #603E00
-  );
+  background: linear-gradient(to bottom, #bd8622, #603e00);
 }
 
 /* Firefox */
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #8B6B52 #FFF9EF;
+  scrollbar-color: #8b6b52 #fff9ef;
 }

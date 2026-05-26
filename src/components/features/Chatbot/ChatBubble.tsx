@@ -31,8 +31,8 @@ export default function ChatBubble({ role, message }: Props) {
           leading-relaxed shadow-sm animate-in fade-in slide-in-from-bottom-2 duration-300
           ${
             isUser
-              ? "rounded-br-md bg-[#8B6B52] text-[#FDF5E6]"
-              : "rounded-bl-md border border-[#E8D0A4] bg-[#FFF9EF] text-[#603E00]"
+              ? "rounded-br-md bg-ternary text-ternary"
+              : "rounded-bl-md border border-[#E8D0A4] bg-main text-main"
           }
         `}
       >
