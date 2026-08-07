@@ -47,8 +47,8 @@ export default function Hero() {
                         }}
                         className=" font-poppins text-5xl font-extrabold leading-[0.95] tracking-tight text-primary-foreground sm:text-6xl md:text-7xl lg:text-[72px]"
                     >
-                        Kemudahan <br />
-                        adalah kemewahan
+                        Aroma yang <br />
+                        Mengerti Ruangmu
                     </motion.h1>
 
                     <motion.p
@@ -60,10 +60,10 @@ export default function Hero() {
                         }}
                         className=" font-poppins mt-6 max-w-full text-base leading-relaxed text-primary-foreground/90 sm:text-lg md:max-w-155 md:text-xl"
                     >
-                        Karena setiap tubuh memiliki cerita yang berbeda.
-                        Temukan terapi yang dirancang khusus untuk Anda melalui
-                        asisten AI kami, dan hadirkan kemewahan spa profesional
-                        dalam kenyamanan hunian pribadi Anda.
+                        Setiap ruang punya karakter berbeda. Ceritakan mood
+                        yang ingin kamu bangun, dan Fern akan meracik rekomendasi
+                        aroma yang paling pas — dari candle hingga diffuser,
+                        semua bisa kamu pesan langsung dari sini.
                     </motion.p>
 
                     <motion.div
@@ -77,17 +77,17 @@ export default function Hero() {
                     >
                         <Link
                             href="#reservasi-ai"
-                            className=" font-poppins rounded-full bg-[#B35811] px-7 py-3.5 text-center text-base font-semibold text-primary-foreground transition-all duration-300 hover:scale-105  md:px-9 md:py-4 md:text-xl "
+                            className=" font-poppins rounded-full bg-fern-ternary px-7 py-3.5 text-center text-base font-semibold text-primary-foreground transition-all duration-300 hover:scale-105  md:px-9 md:py-4 md:text-xl "
                         >
-                            Rekomendasi AI
+                            Rekomendasi Fern
                         </Link>
                         
 
                         <Link
-                            href="#daftar-layanan "
-                            className=" font-poppins rounded-full border-2 border-primary-foreground/80 bg-primary-foreground/5 px-7 py-3.5 text-center text-base font-semibold text-primary-foreground backdrop-blur-md transition-all duration-300 hover:bg-primary-foreground hover:text-[#B35811] md:px-9 md:py-4 md:text-xl"
+                            href="#koleksi"
+                            className=" font-poppins rounded-full border-2 border-primary-foreground/80 bg-primary-foreground/5 px-7 py-3.5 text-center text-base font-semibold text-primary-foreground backdrop-blur-md transition-all duration-300 hover:bg-primary-foreground hover:text-fern-ternary md:px-9 md:py-4 md:text-xl"
                         >
-                            Lihat Layanan
+                            Lihat Koleksi
                         </Link>
                     </motion.div>
                 </motion.div>

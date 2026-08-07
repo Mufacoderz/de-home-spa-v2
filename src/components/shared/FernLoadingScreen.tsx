@@ -10,12 +10,12 @@ type Props = {
   texts?: string[];
 };
 
-export default function TheraLoadingScreen({
-  title = "Thera AI",
+export default function FernLoadingScreen({
+  title = "Fern AI",
   texts = [
-    "Menyiapkan sesi konsultasi bersama Thera...",
-    "Hidup Jokowi!!!",
-    "Menyusun pengalaman spa terbaik...",
+    "Menyiapkan sesi konsultasi bersama Fern...",
+    "Meracik rekomendasi aroma terbaik...",
+    "Menyusun suasana ruangan impianmu...",
   ],
 }: Props) {
 
@@ -61,7 +61,7 @@ export default function TheraLoadingScreen({
         flex
         items-center
         justify-center
-        bg-[#FFF9EF]
+        bg-fern-panel
         px-6
       "
     >
@@ -84,7 +84,7 @@ export default function TheraLoadingScreen({
             h-72
             w-72
             rounded-full
-            bg-[#BD8622]/10
+            bg-fern-gold/10
             blur-3xl
           "
         />
@@ -97,7 +97,7 @@ export default function TheraLoadingScreen({
             h-72
             w-72
             rounded-full
-            bg-[#603E00]/10
+            bg-fern-main/10
             blur-3xl
           "
         />
@@ -116,11 +116,11 @@ export default function TheraLoadingScreen({
           items-center
           rounded-3xl
           border
-          border-[#E8D5B7]
+          border-fern-frost
           bg-white/70
           px-8
           py-10
-          shadow-[0_8px_48px_0_rgba(96,62,0,0.10)]
+          shadow-[0_8px_48px_0_rgba(36,22,50,0.12)]
           backdrop-blur-md
         "
       >
@@ -136,8 +136,8 @@ export default function TheraLoadingScreen({
             -translate-x-1/2
             rounded-full
             bg-linear-to-r
-            from-[#BD8622]
-            to-[#603E00]
+            from-fern-gold
+            to-fern-main
           "
         />
 
@@ -153,8 +153,8 @@ export default function TheraLoadingScreen({
             justify-center
             rounded-2xl
             border
-            border-[#E8D5B7]
-            bg-[#FFF9EF]
+            border-fern-frost
+            bg-fern-panel
             shadow-inner
           "
         >
@@ -165,13 +165,13 @@ export default function TheraLoadingScreen({
               inset-0
               animate-pulse
               rounded-2xl
-              bg-[#BD8622]/10
+              bg-fern-gold/10
             "
           />
 
           <Image
             src={iconCoklat}
-            alt="Thera"
+            alt="Fern"
             width={52}
             height={52}
             className="relative z-10 object-contain"
@@ -187,7 +187,7 @@ export default function TheraLoadingScreen({
             text-2xl
             font-bold
             tracking-wide
-            text-[#603E00]
+            text-fern-main
           "
         >
           {title}
@@ -204,7 +204,7 @@ export default function TheraLoadingScreen({
           "
         >
 
-          <div className="h-px flex-1 bg-[#E8D5B7]" />
+          <div className="h-px flex-1 bg-fern-frost" />
 
           <span
             className="
@@ -212,13 +212,13 @@ export default function TheraLoadingScreen({
               text-[10px]
               uppercase
               tracking-[0.2em]
-              text-[#BD8622]
+              text-fern-gold
             "
           >
             Sedang Memuat
           </span>
 
-          <div className="h-px flex-1 bg-[#E8D5B7]" />
+          <div className="h-px flex-1 bg-fern-frost" />
 
         </div>
 
@@ -230,7 +230,7 @@ export default function TheraLoadingScreen({
             font-poppins
             text-sm
             leading-relaxed
-            text-[#8B6B52]
+            text-fern-mid
             transition-opacity
             duration-300
           "
@@ -257,7 +257,7 @@ export default function TheraLoadingScreen({
               w-2.5
               animate-bounce
               rounded-full
-              bg-[#BD8622]
+              bg-fern-gold
             "
           />
 
@@ -267,7 +267,7 @@ export default function TheraLoadingScreen({
               w-2.5
               animate-bounce
               rounded-full
-              bg-[#BD8622]
+              bg-fern-gold
               [animation-delay:0.15s]
             "
           />
@@ -278,7 +278,7 @@ export default function TheraLoadingScreen({
               w-2.5
               animate-bounce
               rounded-full
-              bg-[#BD8622]
+              bg-fern-gold
               [animation-delay:0.3s]
             "
           />

@@ -1,25 +1,30 @@
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { LuLeaf, LuWind } from "react-icons/lu";
-import { GiFist } from "react-icons/gi";
+import { LuFlame, LuWind, LuSprayCan, LuDroplet } from "react-icons/lu";
 
-const LEVELS = [
+const KATEGORI = [
   {
-    id: "Ringan",
-    label: "Ringan",
-    desc: "Aroma Subtle",
-    icon: <LuLeaf className="text-[35px] md:text-[60px]" />,
+    id: "Candle",
+    label: "Candle",
+    desc: "Lilin Aromaterapi",
+    icon: <LuFlame className="text-[35px] md:text-[60px]" />,
   },
   {
-    id: "Sedang",
-    label: "Sedang",
-    desc: "Seimbang & Terasa",
+    id: "Reed Diffuser",
+    label: "Reed Diffuser",
+    desc: "Aroma Tahan Lama",
     icon: <LuWind className="text-[35px] md:text-[60px]" />,
   },
   {
-    id: "Kuat",
-    label: "Kuat",
-    desc: "Tahan Lama & Intens",
-    icon: <GiFist className="text-[35px] md:text-[60px]" />,
+    id: "Room Spray",
+    label: "Room Spray",
+    desc: "Instan & Praktis",
+    icon: <LuSprayCan className="text-[35px] md:text-[60px]" />,
+  },
+  {
+    id: "Roll-On",
+    label: "Roll-On",
+    desc: "Personal & Portable",
+    icon: <LuDroplet className="text-[35px] md:text-[60px]" />,
   },
 ];
 
@@ -30,7 +35,7 @@ interface Props {
   onPrev: () => void;
 }
 
-export default function StepLevel({
+export default function StepKategori({
   selected,
   onSelect,
   onNext,
@@ -39,31 +44,31 @@ export default function StepLevel({
   return (
     <div className="font-poppins">
       <h2 className="mb-1 text-center font-poppins text-lg font-semibold text-fern-deep">
-        Seberapa Kuat Aroma yang Kamu Inginkan
+        Kategori Produk yang Kamu Inginkan
       </h2>
       <p className="mb-5 text-center text-sm text-fern-mid">
-        Pilih Intensitas Aroma
+        Pilih Kategori Produk
       </p>
 
-      <div className="mt-12 mb-6 justify-center flex gap-4 md:mt-8">
-        {LEVELS.map((lvl) => (
+      <div className="mt-12 mb-6 flex flex-wrap justify-center gap-4 md:mt-8">
+        {KATEGORI.map((kat) => (
           <button
-            key={lvl.id}
-            onClick={() => onSelect(lvl.id)}
+            key={kat.id}
+            onClick={() => onSelect(kat.id)}
             className={`h-38 w-58 rounded-4xl border border-fern-deep text-center shadow-2xl transition-all md:h-64 ${
-              selected === lvl.id
+              selected === kat.id
                 ? "border-4 border-fern-deep bg-stone-100"
                 : "hover:border-fern-deep"
             }`}
           >
             <span className="flex items-center justify-center text-fern-deep">
-              {lvl.icon}
+              {kat.icon}
             </span>
             <p className="font-poppins text-sm font-bold text-fern-deep md:text-md">
-              {lvl.label}
+              {kat.label}
             </p>
             <p className="text-[8px] font-light text-fern-deep md:text-sm">
-              {lvl.desc}
+              {kat.desc}
             </p>
           </button>
         ))}

@@ -53,11 +53,11 @@ export default function RecommendationCard({
           overflow-hidden
           rounded-[26px]
           border
-          border-[#E8D0A4]
+          border-fern-frost2
           bg-linear-to-br
-          from-[#FFF9EF]
-          to-[#FFF5E6]
-          shadow-[0_8px_24px_rgba(96,62,0,0.08)]
+          from-fern-petal3
+          to-fern-petal
+          shadow-[0_8px_24px_rgba(36,22,50,0.12)]
           md:max-w-[68%]
         "
       >
@@ -68,9 +68,9 @@ export default function RecommendationCard({
             h-1
             w-full
             bg-linear-to-r
-            from-[#BD8622]
-            via-[#D9A441]
-            to-[#8B6B52]
+            from-fern-glow2
+            via-fern-glow
+            to-fern-mid2
           "
         />
 
@@ -86,8 +86,8 @@ export default function RecommendationCard({
       gap-2
       rounded-full
       border
-      border-[#F1D8AA]
-      bg-[#FFF4DE]
+      border-fern-mist
+      bg-fern-petal
       px-3
       py-1.5
     "
@@ -103,10 +103,10 @@ export default function RecommendationCard({
         text-[11px]
         font-semibold
         tracking-wide
-        text-[#BD8622]
+        text-fern-glow2
       "
               >
-                THERA RECOMMENDATION
+                FERN RECOMMENDATION
               </p>
 
             </div>
@@ -125,13 +125,13 @@ export default function RecommendationCard({
               <span
                 className="
         rounded-full
-        bg-[#8B6B52]
+        bg-fern-mid2
         px-3
         py-1
         font-poppins
         text-[11px]
         font-semibold
-        text-[#FDF5E6]
+        text-fern-petal2
       "
               >
                 {selectedTreatment.level}
@@ -141,14 +141,14 @@ export default function RecommendationCard({
                 className="
         rounded-full
         border
-        border-[#E8D0A4]
-        bg-[#FFF9EF]
+        border-fern-frost2
+        bg-fern-petal3
         px-3
         py-1
         font-poppins
         text-[11px]
         font-medium
-        text-[#8B6B52]
+        text-fern-mid2
       "
               >
                 {selectedTreatment.area}
@@ -195,11 +195,11 @@ export default function RecommendationCard({
               font-poppins
               text-[13px]
               leading-relaxed
-              text-[#8B6B52]
+              text-fern-mid2
             "
           >
-            Treatment ini dipilih berdasarkan
-            percakapan dan kebutuhan relaksasimu bersama Thera.
+            Produk ini dipilih berdasarkan
+            percakapan dan suasana yang kamu inginkan bersama Fern.
           </p>
 
           {/* button */}
@@ -220,13 +220,13 @@ export default function RecommendationCard({
               font-poppins
               text-sm
               font-semibold
-              text-[#FDF5E6]
-              shadow-[2px_3px_0px_0px_#E8D0A4]
+              text-fern-petal2
+              shadow-[2px_3px_0px_0px_var(--fern-frost2)]
               transition-all
               duration-150
               hover:translate-x-px
               hover:translate-y-px
-              hover:shadow-[1px_2px_0px_0px_#E8D0A4]
+              hover:shadow-[1px_2px_0px_0px_var(--fern-frost2)]
               active:translate-x-0.5
               active:translate-y-0.5
               active:shadow-none

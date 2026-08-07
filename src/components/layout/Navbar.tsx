@@ -27,14 +27,14 @@ export default function Navbar() {
       <nav
         className={`mx-auto flex h-16 max-w-7xl items-center justify-between rounded-full border px-4 transition-all duration-300 md:px-6 ${
           isScrolled
-            ? "border-[#E8D0A4] bg-[#FFF9EF]/90 shadow-[0_8px_24px_rgba(96,62,0,0.10)] backdrop-blur-md"
+            ? "border-fern-frost2 bg-fern-petal3/90 shadow-[0_8px_24px_rgba(36,22,50,0.12)] backdrop-blur-md"
             : "border-white/15 bg-white/10 shadow-[0_8px_24px_rgba(0,0,0,0.10)] backdrop-blur-md"
         }`}
       >
         <Link href="/" className="flex items-center gap-3">
           <Image
             src={isScrolled ? "/images/logo-coklat.png" : "/images/logo.png"}
-            alt="De Home Spa"
+            alt="Fern Aromatics"
             width={48}
             height={48}
             className="object-contain transition-transform duration-300 hover:scale-105"
@@ -44,17 +44,17 @@ export default function Navbar() {
           <div className="leading-none">
             <h1
               className={`font-playfair text-xl font-bold transition-colors duration-300 md:text-2xl ${
-                isScrolled ? "text-main" : "text-white"
+                isScrolled ? "text-fern-deep" : "text-white"
               }`}
             >
-              De Home Spa
+              Fern Aromatics
             </h1>
             <p
               className={`mt-1 hidden font-poppins text-[11px] transition-colors duration-300 sm:block ${
-                isScrolled ? "text-[#8B6B52]" : "text-white/75"
+                isScrolled ? "text-fern-mid" : "text-white/75"
               }`}
             >
-              Relaxation at your home
+              Aroma for your space
             </p>
           </div>
         </Link>
@@ -66,7 +66,7 @@ export default function Navbar() {
                 href={item.href}
                 className={`relative font-poppins text-sm font-medium transition-all duration-300 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:rounded-full after:transition-all after:duration-300 hover:-translate-y-0.5 hover:after:w-full ${
                   isScrolled
-                    ? "text-main after:bg-main hover:text-[#8B6B52]"
+                    ? "text-fern-deep after:bg-fern-deep hover:text-fern-mid"
                     : "text-white after:bg-white hover:text-white/80"
                 }`}
               >

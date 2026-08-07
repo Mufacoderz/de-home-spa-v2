@@ -48,14 +48,14 @@ export default function Footer() {
               />
 
               <h1 className="text-3xl font-bold">
-                De Home Spa
+                Fern Aromatics
               </h1>
             </div>
 
             <p className="mt-5 text-sm leading-relaxed text-gray-200 max-w-sm">
-              Layanan pijat & perawatan tubuh profesional langsung
-              ke rumahmu. Relaksasi mendalam dengan suasana spa
-              premium tanpa perlu keluar rumah.
+              Aromatik rumah berbahan alami — candle, diffuser,
+              room spray, dan roll-on untuk menghadirkan suasana
+              terbaik di setiap ruangmu.
             </p>
 
             {/* SOCIAL */}
@@ -95,15 +95,14 @@ export default function Footer() {
           {/* MENU 1 */}
           <div>
             <h2 className="text-xl font-semibold mb-5">
-              Layanan
+              Koleksi
             </h2>
 
             <ul className="space-y-3 text-gray-200">
-              <li>Full Body Massage</li>
-              <li>Massage & Refleksi</li>
-              <li>Massage Totok Wajah</li>
-              <li>Massage Scrub</li>
-              <li>Massage Kerokan</li>
+              <li>Candle</li>
+              <li>Reed Diffuser</li>
+              <li>Room Spray</li>
+              <li>Roll-On Oil</li>
             </ul>
           </div>
 
@@ -116,10 +115,10 @@ export default function Footer() {
             <ul className="space-y-3 text-gray-200">
               <li>Tentang Kami</li>
               <li>Cara Pemesanan</li>
-              <li>Area Layanan</li>
+              <li>Wilayah Pengiriman</li>
               <li>Promo & Paket</li>
               <li>Galeri</li>
-              <li>Blog Kesehatan</li>
+              <li>Blog Aroma</li>
             </ul>
           </div>
 
@@ -155,7 +154,7 @@ export default function Footer() {
                     Email
                   </p>
 
-                  <p>dehomespa@gmail.com</p>
+                  <p>hello@fernaromatics.id</p>
                 </div>
               </div>
 
@@ -169,7 +168,7 @@ export default function Footer() {
                     Area Layanan
                   </p>
 
-                  <p>Samarinda & Sekitarnya</p>
+                  <p>Seluruh Indonesia</p>
                 </div>
               </div>
 
@@ -193,7 +192,7 @@ export default function Footer() {
 
         {/* BOTTOM */}
         <div className="border-t border-white/20 mt-14 pt-6 text-center text-sm text-gray-300">
-          © 2026 De Home Spa - Samarinda, Kalimantan Timur
+          © 2026 Fern Aromatics - Samarinda, Kalimantan Timur
         </div>
       </div>
     </footer>

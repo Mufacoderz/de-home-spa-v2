@@ -1,12 +1,9 @@
 export function buildMessageToAdmin({
   nama,
-  gender,
   phone,
   lokasi,
   detailAlamat,
   catatan,
-  tanggal,
-  jam,
   treatment,
   level,
   durasi,
@@ -14,13 +11,10 @@ export function buildMessageToAdmin({
   payment,
 }: {
   nama: string;
-  gender: string;
   phone: string;
   lokasi: string;
   detailAlamat: string;
   catatan: string;
-  tanggal: string;
-  jam: string;
   treatment: string;
   level: string;
   durasi: string;
@@ -28,29 +22,26 @@ export function buildMessageToAdmin({
   payment: string;
 }) {
   return `
-Halo Admin, saya ingin melakukan reservasi layanan De Home Spa. Berikut adalah detail pesanan saya:
+Halo Admin, saya ingin memesan produk dari Fern Aromatics. Berikut detail pesanan saya:
 
 DATA PELANGGAN
 Nama: ${nama}
-Gender: ${gender}
 No HP: ${phone}
-Wilayah: ${lokasi}
-Alamat Detail: ${detailAlamat}
 ${catatan ? `Catatan: ${catatan}` : ""}
 
-JADWAL KUNJUNGAN
-Tanggal: ${tanggal}
-Jam: ${jam} WITA
+DETAIL PENGIRIMAN
+Wilayah: ${lokasi}
+Alamat Detail: ${detailAlamat}
 
-DETAIL PERAWATAN
-Treatment: ${treatment}
-Level Tekanan: ${level}
-Durasi: ${durasi} menit
+DETAIL PESANAN
+Produk: ${treatment}
+Intensitas Aroma: ${level}
+Ukuran: ${durasi} ml
 
 INFORMASI PEMBAYARAN
 Total Harga: Rp ${harga}
 Metode: ${payment}
 
-Mohon konfirmasi ketersediaan terapis untuk jadwal di atas. Terima kasih!
+Mohon konfirmasi ketersediaan stok dan proses pesanan saya. Terima kasih!
 `.trim();
 }

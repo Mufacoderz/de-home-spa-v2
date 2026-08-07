@@ -26,7 +26,6 @@ import { toast } from "sonner";
 interface Props {
   nama: string;
   phone: string;
-  gender: string;
   lokasi: string;
   detailAlamat: string;
   payment: string;
@@ -35,8 +34,6 @@ interface Props {
   level: string;
   durasi: string;
   harga: string;
-  tanggal: string;
-  jam: string;
   keluhan: string;
 }
 
@@ -58,7 +55,6 @@ export function normalizeTo62(phone: string) {
 export default function SubmitButton({
   nama,
   phone,
-  gender,
   lokasi,
   detailAlamat,
   catatan,
@@ -66,8 +62,6 @@ export default function SubmitButton({
   level,
   durasi,
   harga,
-  tanggal,
-  jam,
   keluhan,
 }: Props) {
   const [loading, setLoading] = useState(false);
@@ -104,13 +98,10 @@ export default function SubmitButton({
   const sendToAdmin = async () => {
     const messageToAdmin = buildMessageToAdmin({
       nama,
-      gender,
       phone,
       lokasi,
       detailAlamat,
       catatan,
-      tanggal,
-      jam,
       treatment,
       level,
       durasi,
@@ -266,9 +257,7 @@ export default function SubmitButton({
       !nama.trim() ||
       !phone.trim() ||
       !lokasi.trim() ||
-      !detailAlamat.trim() ||
-      !tanggal ||
-      !jam
+      !detailAlamat.trim()
     ) {
       toast.warning("Mohon lengkapi semua data");
       return;
@@ -295,11 +284,11 @@ export default function SubmitButton({
       toast.error("Terjadi kesalahan");
 
       const fallback = `
-Halo Admin, saya ingin reservasi layanan spa.
+Halo Admin, saya ingin memesan produk dari Fern Aromatics.
 
 Nama: ${nama}
-Tanggal: ${tanggal}
-Jam: ${jam}
+Produk: ${treatment}
+Ukuran: ${durasi} ml
       `.trim();
 
       window.location.href =
@@ -317,7 +306,7 @@ Jam: ${jam}
           disabled={loading}
           className="w-full py-3 rounded-xl bg-stone-800 text-white text-sm font-medium hover:bg-stone-700 transition-all active:scale-95 disabled:opacity-50"
         >
-          {loading ? "Memproses..." : "Kirim Booking"}
+          {loading ? "Memproses..." : "Kirim Pesanan"}
         </button>
       </DialogTrigger>
 
@@ -331,22 +320,22 @@ Jam: ${jam}
         <section className="space-y-3 text-sm mt-4">
           <div className="border rounded-lg p-4 space-y-2">
             <h3 className="font-semibold text-lg">
-              Detail Treatment
+              Detail Produk
             </h3>
 
             <p>
-              <span className="font-medium">Treatment:</span>{" "}
+              <span className="font-medium">Produk:</span>{" "}
               {treatment || "-"}
             </p>
 
             <p>
-              <span className="font-medium">Level:</span>{" "}
+              <span className="font-medium">Intensitas Aroma:</span>{" "}
               {level || "-"}
             </p>
 
             <p>
-              <span className="font-medium">Durasi:</span>{" "}
-              {durasi ? `${durasi} menit` : "-"}
+              <span className="font-medium">Ukuran:</span>{" "}
+              {durasi ? `${durasi} ml` : "-"}
             </p>
 
             <p>
@@ -368,11 +357,6 @@ Jam: ${jam}
             </p>
 
             <p>
-              <span className="font-medium">Gender:</span>{" "}
-              {gender || "-"}
-            </p>
-
-            <p>
               <span className="font-medium">No HP:</span>{" "}
               {phone || "-"}
             </p>
@@ -380,16 +364,6 @@ Jam: ${jam}
             <p>
               <span className="font-medium">Alamat:</span>{" "}
               {detailAlamat || "-"}
-            </p>
-
-            <p>
-              <span className="font-medium">Tanggal:</span>{" "}
-              {tanggal || "-"}
-            </p>
-
-            <p>
-              <span className="font-medium">Jam:</span>{" "}
-              {jam || "-"}
             </p>
 
             {catatan && (
@@ -431,7 +405,7 @@ Jam: ${jam}
             type="button"
             onClick={handleOrder}
             disabled={loading}
-            className="w-full h-12 rounded-md bg-[#C9A882] text-white disabled:opacity-50"
+            className="w-full h-12 rounded-md bg-fern-glow3 text-white disabled:opacity-50"
           >
             {loading ? "Memproses..." : "Pesan Sekarang!"}
           </button>

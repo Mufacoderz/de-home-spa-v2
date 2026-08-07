@@ -25,8 +25,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "HOME SPA",
-  description: "Tempat spa terbaik",
+  title: "Fern Aromatics",
+  description: "Aromatik rumah berbahan alami — candle, diffuser, room spray, roll-on.",
 };
 
 export default function RootLayout({

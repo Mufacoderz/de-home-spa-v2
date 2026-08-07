@@ -8,7 +8,7 @@ const snap = new Midtrans.Snap({
 })
 
 export async function POST(request: NextRequest) {
-  const productId = `DEHOMESPA-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+  const productId = `FERNAROMA-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
   const { price } = await request.json();
 
   const parameter = {

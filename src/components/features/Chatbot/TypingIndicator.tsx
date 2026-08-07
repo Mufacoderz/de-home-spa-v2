@@ -7,8 +7,8 @@ export default function TypingIndicator() {
           rounded-[24px]
           rounded-bl-md
           border
-          border-[#E8D0A4]
-          bg-[#FFF9EF]
+          border-fern-frost2
+          bg-fern-petal3
           px-4
           py-3
           shadow-sm
@@ -21,10 +21,10 @@ export default function TypingIndicator() {
             font-poppins
             text-[11px]
             font-medium
-            text-[#BD8622]
+            text-fern-glow2
           "
         >
-          Thera
+          Fern
         </p>
 
         <div className="flex items-center gap-1">
@@ -35,7 +35,7 @@ export default function TypingIndicator() {
               w-2
               animate-bounce
               rounded-full
-              bg-[#8B6B52]
+              bg-fern-mid2
             "
           />
 
@@ -45,7 +45,7 @@ export default function TypingIndicator() {
               w-2
               animate-bounce
               rounded-full
-              bg-[#8B6B52]
+              bg-fern-mid2
               [animation-delay:0.15s]
             "
           />
@@ -56,7 +56,7 @@ export default function TypingIndicator() {
               w-2
               animate-bounce
               rounded-full
-              bg-[#8B6B52]
+              bg-fern-mid2
               [animation-delay:0.3s]
             "
           />

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-import StepBadan from "@/components/features/Recomendation/StepBadan";
+import StepKategori from "@/components/features/Recomendation/StepKategori";
 import StepLevel from "@/components/features/Recomendation/StepLevel";
 import StepDurasi from "@/components/features/Recomendation/StepDurasi";
 import StepKeluhan from "@/components/features/Recomendation/StepKeluhan";
@@ -11,18 +11,11 @@ import StepResult from "@/components/features/Recomendation/StepResult";
 
 import type { Result } from "@/types/flow";
 
-const idToLabel: Record<number, string> = {
-  1: "Kepala",
-  2: "Tangan",
-  3: "Punggung",
-  4: "Kaki",
-};
-
 export default function FlowShell() {
   const router = useRouter();
 
   const [step, setStep] = useState(0);
-  const [selectedBadan, setSelectedBadan] = useState<number[]>([]);
+  const [selectedKategori, setSelectedKategori] = useState("");
   const [selectedLevel, setSelectedLevel] = useState("");
   const [selectedDur, setSelectedDur] = useState("");
   const [keluhan, setKeluhan] = useState("");
@@ -31,8 +24,8 @@ export default function FlowShell() {
   const [result, setResult] = useState<Result | null>(null);
   const [error, setError] = useState("");
 
-  const areas = selectedBadan.map((id) => idToLabel[id]);
-  const STEPS = ["Area Tubuh", "Level", "Durasi", "Keluhan"];
+  const areas = [selectedKategori];
+  const STEPS = ["Kategori", "Level", "Ukuran", "Keluhan"];
 
   const handleNext = () => setStep((s) => Math.min(s + 1, 4));
   const handleBack = () => setStep((s) => Math.max(s - 1, 0));
@@ -69,14 +62,14 @@ export default function FlowShell() {
         {step < 4 && (
           <div className="mb-6 text-center">
             <h1 className="text-2xl font-semibold text-main">
-              Rekomendasi AI
+              Rekomendasi Fern
             </h1>
 
             <p className="mt-1 text-sm text-second">
-              {step === 0 && "AI akan menyesuaikan rekomendasi berdasarkan area yang dipilih"}
-              {step === 1 && "Pilih level pijatan"}
-              {step === 2 && "Berapa lama sesi yang kamu inginkan"}
-              {step === 3 && "Ceritakan keluhanmu"}
+              {step === 0 && "Pilih kategori produk yang kamu inginkan"}
+              {step === 1 && "Pilih intensitas aroma"}
+              {step === 2 && "Pilih ukuran produk yang kamu inginkan"}
+              {step === 3 && "Ceritakan mood atau suasana yang kamu mau"}
             </p>
           </div>
         )}
@@ -93,7 +86,7 @@ export default function FlowShell() {
                     <div
                       className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold transition-all ${isActive || isDone
                           ? "bg-ternary   text-white"
-                          : "border border-[#C9A882] bg-white text-[#C9A882]"
+                          : "border border-fern-mid bg-white text-fern-mid"
                         }`}
                     >
                       {i + 1}
@@ -102,7 +95,7 @@ export default function FlowShell() {
                     <span
                       className={`mt-1 w-16 text-center text-[10px] ${isActive || isDone
                           ? "font-medium text-main"
-                          : "text-[#C9A882]"
+                          : "text-fern-mid"
                         }`}
                     >
                       {label}
@@ -111,7 +104,7 @@ export default function FlowShell() {
 
                   {i < STEPS.length - 1 && (
                     <div
-                      className={`mb-4 h-px w-12 transition-all ${i < step ? "bg-[#8B6B52]" : "bg-[#D9C5B5]"
+                      className={`mb-4 h-px w-12 transition-all ${i < step ? "bg-fern-ternary" : "bg-fern-frost"
                         }`}
                     />
                   )}
@@ -128,9 +121,9 @@ export default function FlowShell() {
             }`}
         >
           {step === 0 && (
-            <StepBadan
-              selected={selectedBadan}
-              onSelect={setSelectedBadan}
+            <StepKategori
+              selected={selectedKategori}
+              onSelect={setSelectedKategori}
               onNext={handleNext}
               onPrev={() => router.push("/")}
             />

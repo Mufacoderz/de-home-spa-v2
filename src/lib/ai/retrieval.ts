@@ -54,34 +54,33 @@ export function retrieveTreatments(input: string, limit = 6) {
         }
       }
 
-      // Bonus kalau user minta lembut/ringan
+      // Bonus kalau user minta ringan/subtle
       if (
-        (query.includes("lembut") ||
-          query.includes("ringan") ||
-          query.includes("santai") ||
-          query.includes("relaks")) &&
-        treatment.level === "Lembut"
+        (query.includes("ringan") ||
+          query.includes("subtle") ||
+          query.includes("lembut")) &&
+        treatment.level === "Ringan"
       ) {
         score += 5;
       }
 
-      // Bonus kalau user minta normal/sedang
+      // Bonus kalau user minta sedang/seimbang
       if (
         (query.includes("normal") ||
           query.includes("sedang") ||
-          query.includes("biasa")) &&
-        treatment.level === "Normal"
+          query.includes("biasa") ||
+          query.includes("seimbang")) &&
+        treatment.level === "Sedang"
       ) {
         score += 5;
       }
 
-      // Bonus kalau user minta kuat/keras/dalam
+      // Bonus kalau user minta kuat/tahan lama
       if (
         (query.includes("kuat") ||
-          query.includes("keras") ||
-          query.includes("dalam") ||
-          query.includes("deep")) &&
-        treatment.level === "Keras"
+          query.includes("tahan lama") ||
+          query.includes("intens")) &&
+        treatment.level === "Kuat"
       ) {
         score += 5;
       }

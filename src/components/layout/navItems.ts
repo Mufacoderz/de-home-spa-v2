@@ -1,6 +1,5 @@
 export const navItems = [
   { label: "Testimonial", href: "#testimonial" },
-  { label: "Lokasi", href: "#lokasi" },
-  { label: "Layanan", href: "#layanan" },
+  { label: "Koleksi", href: "#koleksi" },
   { label: "FAQ", href: "#faq" },
 ];

@@ -12,34 +12,34 @@ interface Props {
 
 export default function ChatHeader({ onBack, onNewChat }: Props) {
     return (
-        <header className="flex items-center gap-3 border-b border-[#E8D0A4] bg-[#FFF9EF]/90 px-4 py-4">
+        <header className="flex items-center gap-3 border-b border-fern-frost2 bg-fern-petal3/90 px-4 py-4">
             <button
                 onClick={onBack}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-[#E8D0A4] bg-white text-main transition hover:bg-[#603e00] hover:text-white"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-fern-mid bg-white text-fern-deep transition hover:bg-fern-main hover:text-white"
                 aria-label="Kembali"
             >
                 <ArrowLeft size={20} />
             </button>
 
-            <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl border border-[#E8D0A4] bg-white shadow-sm">
+            <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl border border-fern-frost2 bg-white shadow-sm">
                 <Image
                     src={iconCoklat}
-                    alt="Thera AI"
+                    alt="Fern AI"
                     width={28}
                     height={28}
                     className="object-contain"
                     priority
                 />
 
-                <span className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full border-2 border-[#FFF9EF] bg-[#7DBE72]" />
+                <span className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full border-2 border-fern-petal3 bg-fern-online" />
             </div>
 
             <div className="min-w-0 flex-1">
                 <h1 className="font-playfair text-2xl font-bold leading-none text-main">
-                    Thera AI
+                    Fern AI
                 </h1>
                 <p className="mt-1 truncate font-poppins text-xs text-second">
-                    Online • Konsultasi treatment de HOME SPA
+                    Online • Konsultasi aroma Fern Aromatics
                 </p>
             </div>
 

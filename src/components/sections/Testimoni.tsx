@@ -10,26 +10,26 @@ const ratings = [
 
 const testimonials = [
   {
-    text: "Booking lewat HP gampang banget, terapis datang tepat waktu. Punggung langsung enteng!",
+    text: "Pesan lewat HP gampang banget, lilinnya wanginya pas di kamar. Tidur jadi lebih nyenyak!",
     name: "Fulan bin Wulan",
   },
   {
-    text: "Fitur rekomendasi AI-nya keren banget! Tinggal pilih area pegal langsung dicariin treatment cocok.",
+    text: "Fitur rekomendasi Fern-nya keren banget! Tinggal ceritain mood, langsung dicariin produk yang cocok.",
     name: "Budi Santoso",
   },
   {
-    text: "Pelayanannya mantap sih, habis treatment badan rasanya reset kayak habis restart Windows.",
+    text: "Diffusernya mantap sih, ruang kerja jadi wangi seharian. Suasana kerja langsung beda.",
     name: "Jack",
   },
   {
-    text: "Kerokannya mantap! Masuk angin langsung surrender.",
+    text: "Room spray-nya juara! Kamar mandi langsung segar dan harumnya tahan lama.",
     name: "Sofyan Al-Buqori",
   },
 ];
 
 export default function Testimoni() {
   return (
-    <section className="bg-[#FDF5E6] flex flex-col lg:flex-row gap-10 p-8 lg:p-20">
+    <section className="bg-fern-panel flex flex-col lg:flex-row gap-10 p-8 lg:p-20">
 
       <div className="kiri w-full lg:w-[40%] flex flex-col justify-center">
 
@@ -60,9 +60,9 @@ export default function Testimoni() {
             >
               <span className="text-sm text-main">{item.star}</span>
 
-              <div className="h-2.5 w-full overflow-hidden rounded-full bg-[#DEDCD6]">
+              <div className="h-2.5 w-full overflow-hidden rounded-full bg-fern-frost3">
                 <div
-                  className="h-full rounded-full bg-[#C9A46C]"
+                  className="h-full rounded-full bg-fern-ternary"
                   style={{ width: `${item.percent}%` }}
                 />
               </div>
@@ -76,7 +76,7 @@ export default function Testimoni() {
           {testimonials.map((item, index) => (
             <div
               key={index}
-              className="bg-[#E7CFA3] rounded-[28px] p-8 shadow-md flex flex-col justify-between min-h-60"
+              className="bg-fern-frost rounded-[28px] p-8 shadow-md flex flex-col justify-between min-h-60"
             >
               <div>
                 <div className="flex justify-center gap-1 mb-6">

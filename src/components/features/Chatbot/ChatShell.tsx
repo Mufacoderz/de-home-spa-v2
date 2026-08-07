@@ -7,11 +7,11 @@ import ChatHeader from "./ChatHeader";
 import ChatMessage from "./ChatMessage";
 import ChatInput from "./ChatInput";
 import TypingIndicator from "./TypingIndicator";
-import TheraLoadingScreen from "../../shared/TheraLoadingScreen";
+import FernLoadingScreen from "../../shared/FernLoadingScreen";
 
 import type { ChatAIResponse, ChatMessage as ChatMessageType } from "@/types/chat";
 
-const STORAGE_KEY = "thera-chat-messages";
+const STORAGE_KEY = "fern-chat-messages";
 
 const defaultMessages: ChatMessageType[] = [
     {
@@ -19,15 +19,15 @@ const defaultMessages: ChatMessageType[] = [
         role: "assistant",
         type: "chat",
         content:
-            "Halo, aku Thera. Ceritakan keluhan tubuhmu, nanti aku bantu arahkan treatment yang paling cocok.",
+            "Halo, aku Fern. Ceritakan mood atau suasana yang kamu mau, nanti aku bantu temukan produk yang paling cocok.",
     },
 ];
 
 const quickSuggestions = [
-    "Punggungku pegal habis duduk lama",
-    "Kepalaku pusing dan tegang",
-    "Kakiku capek setelah banyak jalan",
-    "Aku mau treatment yang lembut dan relaks",
+    "Pengen suasana kamar yang bikin tidur lebih nyenyak",
+    "Butuh aroma biar ruang kerja terasa fokus dan tenang",
+    "Mau aroma segar buat kamar mandi atau ruang kecil",
+    "Lagi pengen suasana rumah yang hangat dan homey",
 ];
 
 export default function ChatShell() {
@@ -79,7 +79,7 @@ export default function ChatShell() {
     }
 
     function handleNewChat() {
-        const confirmed = window.confirm("Mulai chat baru dengan Thera?");
+        const confirmed = window.confirm("Mulai chat baru dengan Fern?");
 
         if (!confirmed) return;
 
@@ -176,7 +176,7 @@ export default function ChatShell() {
                     role: "assistant",
                     type: "chat",
                     content:
-                        "Maaf, Thera lagi gagal memproses pesanmu. Coba kirim ulang sebentar lagi.",
+                        "Maaf, Fern lagi gagal memproses pesanmu. Coba kirim ulang sebentar lagi.",
                 },
             ]);
         } finally {
@@ -187,8 +187,8 @@ export default function ChatShell() {
     return (
         <main className="min-h-screen bg-thera px-0  sm:px-4 ">
             {leaving && (
-                <TheraLoadingScreen
-                    title="Thera AI"
+                <FernLoadingScreen
+                    title="Fern AI"
                     texts={[
                         "Mengakhiri sesi konsultasi...",
                         "Menyimpan pengalaman konsultasimu...",

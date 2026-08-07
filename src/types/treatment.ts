@@ -1,5 +1,5 @@
-export type AreaTreatment = "Kepala" | "Kaki" | "Tangan" | "Punggung" | "Upper" | "Full Badan";
-export type LevelTreatment = "Lembut" | "Normal" | "Keras";
+export type AreaTreatment = "Candle" | "Reed Diffuser" | "Room Spray" | "Roll-On";
+export type LevelTreatment = "Ringan" | "Sedang" | "Kuat";
 
 export interface Treatment {
   kode: string;

@@ -48,20 +48,43 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
   --font-heading: var(--font-sans);
+
+  --color-fern-main: var(--main-bg);
+  --color-fern-second: var(--second-bg);
+  --color-fern-ternary: var(--ternary-bg);
+  --color-fern-gold: var(--thera-gold);
+  --color-fern-deep: #3B2A55;
+  --color-fern-mid: #7E67A5;
+  --color-fern-mid2: #8A78B5;
+  --color-fern-soft: #B4A3D4;
+  --color-fern-hover: #7C3AED;
+  --color-fern-online: #7BE3A0;
+  --color-fern-panel: #F4F0FA;
+  --color-fern-frost: #E6DFF2;
+  --color-fern-frost2: #E0D6F2;
+  --color-fern-frost3: #E2DBEF;
+  --color-fern-frost4: #DDD4EC;
+  --color-fern-mist: #E8DCF7;
+  --color-fern-petal: #F3ECFB;
+  --color-fern-petal2: #F6F1FB;
+  --color-fern-petal3: #F6F2FC;
+  --color-fern-glow: #D4B8FF;
+  --color-fern-glow2: #B99AE8;
+  --color-fern-glow3: #BFA5E6;
 }
 
 :root {
-  --main-bg: #fff9ef;
-  --second-bg: #e8d0a4;
-  --ternary-bg: #603e00;
-  --main-text: #603e00;
-  --secondary-text: #8b6b52;
-  --ternary-text: #fdf5e6;
-  --thera-bg: #fdf5e6;
-  --thera-surface: #fff9ef;
-  --thera-border: #e8d0a4;
-  --thera-accent: #8b6b52;
-  --thera-gold: #bd8622;
+  --main-bg: #241632;
+  --second-bg: #F2EDF9;
+  --ternary-bg: #8B5CF6;
+  --main-text: #F5F1FB;
+  --secondary-text: #C6B8DC;
+  --ternary-text: #241632;
+  --thera-bg: #2B1B42;
+  --thera-surface: #241632;
+  --thera-border: #4A3570;
+  --thera-accent: #8B5CF6;
+  --thera-gold: #C9B3F0;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -235,23 +258,23 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #fff9ef;
+  background: #241632;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #d9a441, #8b6b52);
+  background: linear-gradient(to bottom, #C9B3F0, #3B2A55);
 
   border-radius: 999px;
-  border: 2px solid #fff9ef;
+  border: 2px solid #241632;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #bd8622, #603e00);
+  background: linear-gradient(to bottom, #8B5CF6, #241632);
 }
 
 /* Firefox */
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #8b6b52 #fff9ef;
+  scrollbar-color: #3B2A55 #241632;
 }

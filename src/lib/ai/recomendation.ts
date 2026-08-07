@@ -3,7 +3,6 @@ import { askGroq } from "@/lib/ai/groq";
 import { parseJSONObject } from "@/lib/ai/parser";
 import type { Treatment } from "@/types/treatment";
 import type { GroqResponse } from "@/types/groq";
-import { determineScope } from "./determineScope";
 
 interface RecommendParams {
   areas: string[];
@@ -23,7 +22,7 @@ export async function recommendTreatment({
   keluhan,
   treatments,
 }: RecommendParams) {
-  const scope = determineScope(areas);
+  const scope = areas[0];
 
   const filtered = treatments.filter(
     (t) => t.area.toLowerCase() === scope.toLowerCase()
@@ -32,7 +31,7 @@ export async function recommendTreatment({
   if (!filtered.length) {
     return {
       success: false,
-      message: `Tidak ada treatment untuk area ${scope}`,
+      message: `Tidak ada produk untuk kategori ${scope}`,
     };
   }
 
@@ -64,7 +63,7 @@ export async function recommendTreatment({
   if (!selected) {
     return {
       success: false,
-      message: "Kode treatment tidak ditemukan",
+      message: "Kode produk tidak ditemukan",
       raw: parsed,
     };
   }

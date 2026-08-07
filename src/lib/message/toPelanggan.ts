@@ -6,14 +6,14 @@ export function buildMessageToPelanggan({
   tips: string[];
 }) {
   return `
-Hai ${nama}, terima kasih telah melakukan reservasi di De Home Spa!
+Hai ${nama}, terima kasih telah memesan di Fern Aromatics!
 
-Jika belum, jangan lupa kirim konfirmasi reservasi kamu ke admin kami ya.
+Jika belum, jangan lupa kirim konfirmasi pesanan kamu ke admin kami ya.
 
-Sambil menunggu jadwal treatment, berikut tips dari kami:
+Sambil menunggu pesanan sampai, berikut tips dari Fern:
 
 ${tips.map((t) => `- ${t}`).join("\n")}
 
-De Home Spa
+Fern Aromatics
 `.trim();
 }

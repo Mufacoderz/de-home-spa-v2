@@ -1,29 +1,29 @@
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { MdOutlineTimer } from "react-icons/md";
 
-const DURATIONS = [
+const UKURAN = [
+  {
+    id: "10",
+    label: "10ml",
+    desc: "Travel Size",
+    icon: <MdOutlineTimer className="text-[35px] md:text-[55px]" />,
+  },
   {
     id: "30",
-    label: "30 menit",
-    desc: "Durasi Singkat",
+    label: "30ml",
+    desc: "Reguler",
     icon: <MdOutlineTimer className="text-[35px] md:text-[55px]" />,
   },
   {
     id: "60",
-    label: "60 menit",
-    desc: "Durasi Ideal",
+    label: "60ml",
+    desc: "Value Size",
     icon: <MdOutlineTimer className="text-[35px] md:text-[55px]" />,
   },
   {
-    id: "90",
-    label: "90 menit",
-    desc: "Lebih Lama",
-    icon: <MdOutlineTimer className="text-[35px] md:text-[55px]" />,
-  },
-  {
-    id: "120",
-    label: "120 menit",
-    desc: "Sesi Maksimal",
+    id: "100",
+    label: "100ml",
+    desc: "Jumbo",
     icon: <MdOutlineTimer className="text-[35px] md:text-[55px]" />,
   },
 ];
@@ -43,32 +43,32 @@ export default function StepDurasi({
 }: Props) {
   return (
     <div className="font-poppins">
-      <h2 className="mb-1 text-center text-lg font-semibold text-[#8B6B52]">
-        Durasi Pijatan yang kamu inginkan
+      <h2 className="mb-1 text-center text-lg font-semibold text-fern-deep">
+        Ukuran yang kamu inginkan
       </h2>
-      <p className="text-center text-sm text-[#C8A96E]">
-        Pilih Durasi Pijatan yang paling sesuai
+      <p className="text-center text-sm text-fern-mid">
+        Pilih Ukuran Produk yang paling sesuai
       </p>
 
-      <div className="mt-12 mb-6 flex gap-4 md:mt-8">
-        {DURATIONS.map((dur) => (
+      <div className="mt-12 mb-6 flex flex-wrap justify-center gap-4 md:mt-8">
+        {UKURAN.map((uk) => (
           <button
-            key={dur.id}
-            onClick={() => onSelect(dur.id)}
-            className={`h-38 w-58 rounded-4xl border border-[#8B6B52] text-center shadow-2xl transition-all md:h-64 ${
-              selected === dur.id
-                ? "border-4 border-[#8B6B52] bg-stone-100"
-                : "hover:border-[#8B6B52]"
+            key={uk.id}
+            onClick={() => onSelect(uk.id)}
+            className={`h-38 w-58 rounded-4xl border border-fern-deep text-center shadow-2xl transition-all md:h-64 ${
+              selected === uk.id
+                ? "border-4 border-fern-deep bg-stone-100"
+                : "hover:border-fern-deep"
             }`}
           >
-            <span className="mb-4 flex items-center justify-center text-[#8B6B52]">
-              {dur.icon}
+            <span className="mb-4 flex items-center justify-center text-fern-deep">
+              {uk.icon}
             </span>
-            <p className="font-poppins text-[10px] font-bold text-[#8B6B52] md:text-sm">
-              {dur.label}
+            <p className="font-poppins text-[10px] font-bold text-fern-deep md:text-sm">
+              {uk.label}
             </p>
-            <p className="text-[6px] font-light text-[#C8A96E] md:text-xs">
-              {dur.desc}
+            <p className="text-[6px] font-light text-fern-mid md:text-xs">
+              {uk.desc}
             </p>
           </button>
         ))}
@@ -77,7 +77,7 @@ export default function StepDurasi({
       <section className="mt-22 flex items-center justify-between md:mt-0">
         <button
           onClick={onPrev}
-          className="mt-6 flex w-28 items-center justify-center gap-2 rounded-4xl border-2 border-[#8B6B52] py-2 text-sm font-medium text-[#8B6B52] transition md:w-32"
+          className="mt-6 flex w-28 items-center justify-center gap-2 rounded-4xl border-2 border-fern-deep py-2 text-sm font-medium text-fern-deep transition md:w-32"
         >
           <FaArrowLeft />
           <span>Kembali</span>
@@ -85,8 +85,8 @@ export default function StepDurasi({
 
         <button
           onClick={onNext}
-          disabled={selected.length === 0}
-          className="mt-6 flex w-38 items-center justify-center gap-2 rounded-4xl border-2 border-[#8B6B52] py-2 text-sm font-medium text-[#8B6B52] transition disabled:opacity-40 md:w-52"
+          disabled={!selected}
+          className="mt-6 flex w-38 items-center justify-center gap-2 rounded-4xl border-2 border-fern-deep py-2 text-sm font-medium text-fern-deep transition disabled:opacity-40 md:w-52"
         >
           <span>Lanjutkan</span>
           <FaArrowRight />

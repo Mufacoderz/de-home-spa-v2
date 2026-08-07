@@ -14,14 +14,14 @@ export default function TreatmentDetail() {
   return (
     <div className="mb-6">
       <h2 className="text-sm font-medium text-stone-800 mb-4">
-        Detail Treatment
+        Detail Produk
       </h2>
 
       <div className="space-y-4">
 
         <div>
           <label className="text-xs text-stone-500 mb-1 block">
-            Nama Treatment
+            Nama Produk
           </label>
 
           <input
@@ -33,7 +33,7 @@ export default function TreatmentDetail() {
 
         <div>
           <label className="text-xs text-stone-500 mb-1 block">
-            Level Pijatan
+            Intensitas Aroma
           </label>
 
           <input
@@ -45,12 +45,12 @@ export default function TreatmentDetail() {
 
         <div>
           <label className="text-xs text-stone-500 mb-1 block">
-            Durasi
+            Ukuran
           </label>
 
           <input
             type="text"
-            readOnly value={`${durasi} menit`}
+            readOnly value={`${durasi} ml`}
             className="w-full rounded-xl border border-stone-200 px-4 py-3 text-sm"
           />
         </div>

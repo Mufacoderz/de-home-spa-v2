@@ -4,9 +4,9 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createPortal } from "react-dom";
 import type { Treatment } from "@/types/treatment";
-import { Clock } from "lucide-react";
+import { Ruler } from "lucide-react";
 
-type Durasi = 30 | 60 | 90 | 120;
+type Ukuran = 10 | 30 | 60 | 100;
 
 export default function PricingModal({
   treatment,
@@ -17,8 +17,8 @@ export default function PricingModal({
 }) {
   const router = useRouter();
 
-  const durations: Durasi[] = [30, 60, 90, 120];
-  const [selected, setSelected] = useState<Durasi>(60);
+  const ukuranList: Ukuran[] = [10, 30, 60, 100];
+  const [selected, setSelected] = useState<Ukuran>(30);
 
   const harga = treatment.harga[selected];
 
@@ -44,45 +44,45 @@ export default function PricingModal({
         onClick={(e) => e.stopPropagation()}
       >
         <div className="card-pricing">
-          <div className="mb-4 bg-[#8B6B52] p-6 pr-8 text-center">
+          <div className="mb-4 bg-fern-deep p-6 pr-8 text-center">
             <h3 className="font-poppins text-[27px] font-bold text-white">
-              Durasi & Harga
+              Ukuran & Harga
             </h3>
 
             <p className="font-poppins text-[14px] text-white">
-              Pilih Durasi Layanan Sesuai Kebutuhan Anda
+              Pilih Ukuran Sesuai Kebutuhan Anda
             </p>
           </div>
 
-          <div className="m-5 flex flex-col gap-2.5 rounded-[15px] border border-[#8B6B52] px-2 py-5">
-            {durations.map((d) => (
+          <div className="m-5 flex flex-col gap-2.5 rounded-[15px] border border-fern-deep px-2 py-5">
+            {ukuranList.map((u) => (
               <button
-                key={d}
-                onClick={() => setSelected(d)}
+                key={u}
+                onClick={() => setSelected(u)}
                 className={`flex items-center justify-between border-b px-4 py-3.5 transition-all ${
-                  selected === d
-                    ? "border-b-[#BD8622] bg-[#fdf6e9]"
-                    : "border-b-stone-200 bg-white hover:border-b-[#BD8622]"
+                  selected === u
+                    ? "border-b-fern-ternary bg-fern-panel"
+                    : "border-b-stone-200 bg-white hover:border-b-fern-ternary"
                 }`}
               >
                 <div className="flex items-center gap-3">
                   <div className="icon-jam rounded-full bg-second p-1">
-                    <Clock size={20} className="text-[#BD8622]" />
+                    <Ruler size={20} className="text-fern-ternary" />
                   </div>
 
                   <div className="text-left">
                     <p className="font-poppins text-sm font-semibold text-stone-800">
-                      {d} menit
+                      {u} ml
                     </p>
 
                     <p className="font-poppins text-[11px] text-stone-400">
-                      Durasi Treatment
+                      Ukuran Produk
                     </p>
                   </div>
                 </div>
 
-                <span className="font-poppins text-sm font-bold text-[#BD8622]">
-                  Rp {treatment.harga[d].toLocaleString("id-ID")}
+                <span className="font-poppins text-sm font-bold text-fern-ternary">
+                  Rp {treatment.harga[u].toLocaleString("id-ID")}
                 </span>
               </button>
             ))}
@@ -91,14 +91,14 @@ export default function PricingModal({
           <div className="btn-card m-5 mt-0 flex flex-col gap-2.5">
             <button
               onClick={handleBook}
-              className="booking rounded-xl bg-[#8B6B52] p-4 text-center font-poppins font-semibold text-[#FDF5E6] shadow-[2px_3px_0px_0px_#FDF5E6] transition-all duration-100 hover:translate-x-px hover:translate-y-px hover:shadow-[1px_2px_0px_0px_#FDF5E6] active:translate-x-0.5 active:translate-y-0.75 active:shadow-none"
+              className="booking rounded-xl bg-fern-deep p-4 text-center font-poppins font-semibold text-fern-panel shadow-[2px_3px_0px_0px_var(--fern-panel)] transition-all duration-100 hover:translate-x-px hover:translate-y-px hover:shadow-[1px_2px_0px_0px_var(--fern-panel)] active:translate-x-0.5 active:translate-y-0.75 active:shadow-none"
             >
-              Booking Sekarang
+              Pesan Sekarang
             </button>
 
             <button
               onClick={onClose}
-              className="batal rounded-xl bg-[#FDF5E6] p-4 text-center font-poppins font-semibold text-[#8B6B52] shadow-[2px_3px_0px_0px_#761A1C] transition-all duration-100 hover:translate-x-px hover:translate-y-px hover:shadow-[1px_2px_0px_0px_#761A1C] active:translate-x-0.5 active:translate-y-0.75 active:shadow-none"
+              className="batal rounded-xl bg-fern-panel p-4 text-center font-poppins font-semibold text-fern-deep shadow-[2px_3px_0px_0px_var(--ternary-bg)] transition-all duration-100 hover:translate-x-px hover:translate-y-px hover:shadow-[1px_2px_0px_0px_var(--ternary-bg)] active:translate-x-0.5 active:translate-y-0.75 active:shadow-none"
             >
               Batal
             </button>

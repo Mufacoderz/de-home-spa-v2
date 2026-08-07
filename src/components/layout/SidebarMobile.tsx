@@ -26,7 +26,7 @@ export default function SidebarMobile({ isScrolled }: Props) {
           <button
             className={`flex h-10 w-10 items-center justify-center rounded-full border transition-all duration-300 ${
               isScrolled
-                ? "border-[#E8D0A4] bg-[#FFF9EF] text-main"
+                ? "border-fern-frost2 bg-fern-petal3 text-fern-deep"
                 : "border-white/25 bg-white/10 text-white backdrop-blur-md"
             }`}
             aria-label="Buka menu"
@@ -37,31 +37,31 @@ export default function SidebarMobile({ isScrolled }: Props) {
 
         <SheetContent
           side="right"
-          className="w-[82%] border-l border-[#E8D0A4] bg-[#FFF9EF] p-0 text-main"
+          className="w-[82%] border-l border-fern-frost2 bg-fern-petal3 p-0 text-fern-deep"
         >
           <div className="flex h-full flex-col">
-            <div className="flex items-center justify-between border-b border-[#E8D0A4] px-5 py-5">
+            <div className="flex items-center justify-between border-b border-fern-frost2 px-5 py-5">
               <div className="flex items-center gap-3">
                 <Image
                   src="/images/logo-coklat.png"
-                  alt="De Home Spa"
+                  alt="Fern Aromatics"
                   width={42}
                   height={42}
                   className="object-contain"
                 />
 
                 <div>
-                  <h2 className="font-playfair text-xl font-bold text-main">
-                    De Home Spa
+                  <h2 className="font-playfair text-xl font-bold text-fern-deep">
+                    Fern Aromatics
                   </h2>
-                  <p className="font-poppins text-xs text-[#8B6B52]">
-                    Home service treatment
+                  <p className="font-poppins text-xs text-fern-mid">
+                    Aromatik rumah alami
                   </p>
                 </div>
               </div>
 
               <SheetClose asChild>
-                <button className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E8D0A4] text-main">
+                <button className="flex h-9 w-9 items-center justify-center rounded-full border border-fern-frost2 text-fern-deep">
                   <X size={18} />
                 </button>
               </SheetClose>
@@ -72,7 +72,7 @@ export default function SidebarMobile({ isScrolled }: Props) {
                 <SheetClose asChild key={item.label}>
                   <Link
                     href={item.href}
-                    className="rounded-2xl px-4 py-4 font-poppins text-lg font-semibold text-main transition hover:bg-[#E8D0A4]/30"
+                    className="rounded-2xl px-4 py-4 font-poppins text-lg font-semibold text-fern-deep transition hover:bg-fern-frost2/30"
                   >
                     {item.label}
                   </Link>
@@ -80,9 +80,9 @@ export default function SidebarMobile({ isScrolled }: Props) {
               ))}
             </div>
 
-            <div className="mt-auto border-t border-[#E8D0A4] px-5 py-5">
-              <p className="font-poppins text-xs leading-relaxed text-[#8B6B52]">
-                Relaksasi lebih mudah dari rumah bersama de HOME SPA.
+            <div className="mt-auto border-t border-fern-frost2 px-5 py-5">
+              <p className="font-poppins text-xs leading-relaxed text-fern-mid">
+                Aroma alami untuk menemani setiap momen di rumahmu.
               </p>
             </div>
           </div>

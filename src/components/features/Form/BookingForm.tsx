@@ -17,23 +17,20 @@ export default function BookingForm() {
 
   const [nama, setNama] = useState("");
   const [phone, setPhone] = useState("");
-  const [gender, setGender] = useState("Laki-laki");
   const [lokasi, setLokasi] = useState("");
   const [detailAlamat, setDetailAlamat] = useState("");
   const [payment, setPayment] = useState("Cash");
   const [catatan, setCatatan] = useState("");
-  const [tanggal, setTanggal] = useState("");
-  const [jam, setJam] = useState("");
 
   return (
     <div className="min-h-screen bg-white px-4 py-10 flex justify-center">
       <div className="w-full max-w-md">
         <div className="mb-8 text-center">
           <p className="text-xs uppercase tracking-widest text-stone-400 mb-1">
-            Booking Form
+            Checkout
           </p>
           <h1 className="text-2xl font-semibold text-stone-800">
-            Form Reservasi De Home Spa
+            Form Checkout Fern Aromatics
           </h1>
         </div>
 
@@ -43,19 +40,15 @@ export default function BookingForm() {
           <CustomerForm
             nama={nama} setNama={setNama}
             phone={phone} setPhone={setPhone}
-            gender={gender} setGender={setGender}
             lokasi={lokasi} setLokasi={setLokasi}
             detailAlamat={detailAlamat} setDetailAlamat={setDetailAlamat}
             payment={payment} setPayment={setPayment}
             catatan={catatan} setCatatan={setCatatan}
-            tanggal={tanggal} setTanggal={setTanggal}
-            jam={jam} setJam={setJam}
           />
 
           <SubmitButton
             nama={nama}
             phone={phone}
-            gender={gender}
             lokasi={lokasi}
             detailAlamat={detailAlamat}
             payment={payment}
@@ -64,8 +57,6 @@ export default function BookingForm() {
             level={level}
             durasi={durasi}
             harga={harga}
-            tanggal={tanggal}
-            jam={jam}
             keluhan={keluhan}
           />
         </div>

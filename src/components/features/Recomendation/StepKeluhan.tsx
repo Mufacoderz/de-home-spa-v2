@@ -22,11 +22,11 @@ export default function StepKeluhan({
   return (
     <div className="font-poppins">
       <div className="px-4">
-        <h2 className="-mt-3 mb-1 text-left text-md font-semibold text-[#8B6B52]">
-          Ceritakan Keluhanmu
+        <h2 className="-mt-3 mb-1 text-left text-md font-semibold text-fern-deep">
+          Ceritakan Mood atau Suasana yang Kamu Mau
         </h2>
-        <p className="mb-2 text-left text-xs font-medium text-[#C8A96E]">
-          Jelaskan Kondisi Tubuh Agar AI bisa memberikan rekomendasi yang tepat
+        <p className="mb-2 text-left text-xs font-medium text-fern-mid">
+          Jelaskan suasana yang kamu inginkan agar Fern bisa kasih rekomendasi yang pas
         </p>
       </div>
 
@@ -34,39 +34,39 @@ export default function StepKeluhan({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         maxLength={200}
-        placeholder="Contoh: punggung sakit akibat kelamaan ngodingg......"
-        className="min-h-30 w-full resize-none rounded-2xl border border-[#F5EFE6] bg-stone-50 p-4 text-sm text-stone-700 placeholder:text-stone-400 focus:border-4 focus:border-[#F5EFE6] focus:outline-none"
+        placeholder="Contoh: pengen suasana kamar yang bikin tidur lebih nyenyak..."
+        className="min-h-30 w-full resize-none rounded-2xl border border-fern-frost bg-stone-50 p-4 text-sm text-stone-700 placeholder:text-stone-400 focus:border-4 focus:border-fern-frost focus:outline-none"
       />
 
       <div className="w-full px-2">
-        <p className="text-sm text-[#8B6B52]">Pilihan cepat :</p>
+        <p className="text-sm text-fern-deep">Pilihan cepat :</p>
 
         <div className="flex flex-col">
           <button
             onClick={() =>
-              onChange("Punggung dan bahu terasa tegang, habis duduk kerja seharian.")
+              onChange("Pengen ruangan kerja terasa lebih fokus dan tenang.")
             }
-            className="mt-4 flex w-full cursor-pointer items-center justify-center gap-2 rounded-4xl border-2 border-[#C8A96E] bg-[#FDF5E6] px-2 py-1 text-sm font-medium text-[#8B6B52] transition"
+            className="mt-4 flex w-full cursor-pointer items-center justify-center gap-2 rounded-4xl border-2 border-fern-mid bg-fern-panel px-2 py-1 text-sm font-medium text-fern-deep transition"
           >
-            <p>Punggung dan bahu terasa tegang, habis duduk kerja seharian.</p>
+            <p>Pengen ruangan kerja terasa lebih fokus dan tenang.</p>
           </button>
 
           <button
             onClick={() =>
-              onChange("Badan capek, pegal semua, rasanya butuh relaksasi dan pijat")
+              onChange("Lagi pengen suasana rumah yang hangat dan homey.")
             }
-            className="mt-4 flex w-full cursor-pointer items-center justify-center gap-2 rounded-4xl border-2 border-[#C8A96E] bg-[#FDF5E6] px-2 py-1 text-sm font-medium text-[#8B6B52] transition"
+            className="mt-4 flex w-full cursor-pointer items-center justify-center gap-2 rounded-4xl border-2 border-fern-mid bg-fern-panel px-2 py-1 text-sm font-medium text-fern-deep transition"
           >
-            <p>Badan capek, pegal semua, rasanya butuh relaksasi dan pijat</p>
+            <p>Lagi pengen suasana rumah yang hangat dan homey.</p>
           </button>
 
           <button
             onClick={() =>
-              onChange("Leher dan pinggang terasa kaku karena terlalu lama kerja di depan laptop.")
+              onChange("Mau aroma segar buat kamar mandi atau ruang kecil.")
             }
-            className="mt-4 hidden w-full cursor-pointer items-center justify-center gap-2 rounded-4xl border-2 border-[#C8A96E] bg-[#FDF5E6] px-2 py-1 text-sm font-medium text-[#8B6B52] transition md:flex"
+            className="mt-4 hidden w-full cursor-pointer items-center justify-center gap-2 rounded-4xl border-2 border-fern-mid bg-fern-panel px-2 py-1 text-sm font-medium text-fern-deep transition md:flex"
           >
-            <p>Leher dan pinggang terasa kaku karena terlalu lama kerja di depan laptop.</p>
+            <p>Mau aroma segar buat kamar mandi atau ruang kecil.</p>
           </button>
         </div>
       </div>
@@ -79,7 +79,7 @@ export default function StepKeluhan({
         <button
           onClick={onPrev}
           disabled={loading}
-          className="mt-6 flex w-28 items-center justify-center gap-2 rounded-4xl border-2 border-[#8B6B52] py-2 text-sm font-medium text-[#8B6B52] transition disabled:opacity-40 md:w-32"
+          className="mt-6 flex w-28 items-center justify-center gap-2 rounded-4xl border-2 border-fern-deep py-2 text-sm font-medium text-fern-deep transition disabled:opacity-40 md:w-32"
         >
           <FaArrowLeft />
           <span>Kembali</span>
@@ -88,7 +88,7 @@ export default function StepKeluhan({
         <button
           onClick={onSubmit}
           disabled={value.trim().length < 5 || loading}
-          className="mt-6 flex w-38 items-center justify-center gap-2 rounded-4xl border-2 border-[#8B6B52] py-2 text-sm font-medium text-[#8B6B52] transition disabled:opacity-40 md:w-52"
+          className="mt-6 flex w-38 items-center justify-center gap-2 rounded-4xl border-2 border-fern-deep py-2 text-sm font-medium text-fern-deep transition disabled:opacity-40 md:w-52"
         >
           <span>Kirim</span>
           <FaArrowRight />
@@ -97,18 +97,18 @@ export default function StepKeluhan({
 
       {loading && (
         <div className="fixed inset-0 z-999 flex items-center justify-center bg-black/35 px-4 backdrop-blur-sm">
-          <div className="w-full max-w-sm rounded-[28px] bg-[#FFF9EF] px-7 py-8 text-center shadow-2xl animate-in fade-in zoom-in duration-200">
-            <div className="relative mx-auto mb-6 flex h-22 w-22 items-center justify-center rounded-full bg-[#8B6B52]/10">
-              <div className="absolute inset-2 rounded-full border border-[#C8A96E]/50 animate-ping" />
+          <div className="w-full max-w-sm rounded-[28px] bg-fern-second px-7 py-8 text-center shadow-2xl animate-in fade-in zoom-in duration-200">
+            <div className="relative mx-auto mb-6 flex h-22 w-22 items-center justify-center rounded-full bg-fern-deep/10">
+              <div className="absolute inset-2 rounded-full border border-fern-mid/50 animate-ping" />
               <Image src={logoCoklat}  width={42} height={42} alt="logo" />
             </div>
 
             <h3 className="text-xl font-semibold text-main">
-              Menganalisis Rekomendasi
+              Meracik Rekomendasi
             </h3>
 
             <p className="mt-3 text-sm leading-relaxed text-second">
-              AI sedang mencocokkan kebutuhan Anda dengan treatment terbaik.
+              Fern sedang mencocokkan mood kamu dengan produk terbaik.
             </p>
 
             <div className="mt-6 h-2 overflow-hidden rounded-full bg-second">

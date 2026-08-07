@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { TREATMENTS } from "@/data/treatment";
 import { recommendTreatment } from "@/lib/ai/recomendation";
 import type { Treatment } from "@/types/treatment";
-import { determineScope } from "@/lib/ai/determineScope";
 
 export async function POST(req: NextRequest) {
     try {
@@ -31,7 +30,7 @@ export async function POST(req: NextRequest) {
 
         const harga = treatment.harga[Number(durasi)] ?? null;
 
-        const scope = determineScope(areas);
+        const scope = areas[0];
 
         const related: (Treatment & { harga_durasi: number | null })[] = TREATMENTS
             .filter(

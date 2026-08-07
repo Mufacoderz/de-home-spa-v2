@@ -10,10 +10,10 @@ import React from "react";
 
 import {
   BadgeDollarSign,
-  House,
+  Truck,
   Sparkles,
-  Calendar,
-  UserRound,
+  ShoppingCart,
+  Leaf,
 } from "lucide-react";
 
 const overallItems = [
@@ -28,7 +28,7 @@ const overallItems = [
     id: 2,
     from: 0,
     to: 26,
-    text: "Jenis Layanan",
+    text: "Varian Produk",
   },
   {
     id: 3,
@@ -48,30 +48,30 @@ export const whyChooseUsItems = [
 
   {
     id: 2,
-    icon: House,
-    heading: "Datang Ke Rumah",
-    text: "Nikmati layanan pijat berkualitas tanpa perlu keluar rumah; terapis kami akan datang langsung ke lokasi Anda.",
+    icon: Truck,
+    heading: "Dikirim ke Rumahmu",
+    text: "Pesan online, produk kami kirim langsung ke alamatmu, dikemas rapi dan aman.",
   },
 
   {
     id: 3,
     icon: Sparkles,
-    heading: "Saran Pijat Pintar",
-    text: "Gunakan asisten pintar kami untuk menemukan jenis pijat yang paling tepat berdasarkan kebutuhan dan masalah tubuh Anda secara presisi.",
+    heading: "Saran Aroma Pintar",
+    text: "Ceritakan mood dan suasana yang kamu inginkan, Fern bantu temukan produk yang paling cocok secara presisi.",
   },
 
   {
     id: 4,
-    icon: Calendar,
-    heading: "Booking Mudah",
-    text: "Sistem reservasi yang simpel dan cepat memungkinkan Anda memesan jadwal hanya dalam hitungan detik.",
+    icon: ShoppingCart,
+    heading: "Checkout Mudah",
+    text: "Pilih produk, konfirmasi, selesai — proses pemesanan cuma butuh beberapa langkah singkat.",
   },
 
   {
     id: 5,
-    icon: UserRound,
-    heading: "Profesional",
-    text: "Terapis kami telah tersertifikasi dan berpengalaman dalam berbagai teknik pijat untuk hasil yang optimal.",
+    icon: Leaf,
+    heading: "Bahan Berkualitas",
+    text: "Kami pakai essential oil pilihan dan bahan alami berkualitas tinggi di setiap produk.",
   },
 ];
 
@@ -216,7 +216,7 @@ export default function WhyChooseUs() {
                 {index !== whyChooseUsItems.length - 1 && (
                   <div
                     key={`separator-${item.id}`}
-                    className="absolute top-1/2 right-0 hidden h-28 w-px -translate-y-1/2 bg-[#B08968]/40 lg:block"
+                    className="absolute top-1/2 right-0 hidden h-28 w-px -translate-y-1/2 bg-fern-mid/40 lg:block"
                   />
                 )}
 
@@ -228,7 +228,7 @@ export default function WhyChooseUs() {
                   {item.heading}
                 </h3>
 
-                <p className="max-w-60 text-base leading-relaxed text-[#7A5C45]/80">
+                <p className="max-w-60 text-base leading-relaxed text-fern-soft/80">
                   {item.text}
                 </p>
               </motion.div>

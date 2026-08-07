@@ -14,10 +14,10 @@ export default function ChatBubble({ role, message }: Props) {
   return (
     <div className={`flex w-full ${isUser ? "justify-end" : "justify-start"}`}>
       {!isUser && (
-        <div className="mr-2 mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#E8D0A4] bg-[#FFF9EF] shadow-sm">
+        <div className="mr-2 mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-fern-frost2 bg-fern-petal3 shadow-sm">
           <Image
             src={iconCoklat}
-            alt="Thera"
+            alt="Fern"
             width={20}
             height={20}
             className="object-contain"
@@ -32,13 +32,13 @@ export default function ChatBubble({ role, message }: Props) {
           ${
             isUser
               ? "rounded-br-md bg-ternary text-ternary"
-              : "rounded-bl-md border border-[#E8D0A4] bg-main text-main"
+              : "rounded-bl-md border border-fern-frost2 bg-main text-main"
           }
         `}
       >
         {!isUser && (
-          <p className="mb-1 text-[11px] font-medium text-[#BD8622]">
-            Thera
+          <p className="mb-1 text-[11px] font-medium text-fern-glow2">
+            Fern
           </p>
         )}
 
