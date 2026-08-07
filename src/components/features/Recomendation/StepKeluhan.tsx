@@ -103,15 +103,15 @@ export default function StepKeluhan({
               <Image src={logoCoklat}  width={42} height={42} alt="logo" />
             </div>
 
-            <h3 className="text-xl font-semibold text-main">
+            <h3 className="text-xl font-semibold text-fern-deep">
               Meracik Rekomendasi
             </h3>
 
-            <p className="mt-3 text-sm leading-relaxed text-second">
+            <p className="mt-3 text-sm leading-relaxed text-fern-mid">
               Fern sedang mencocokkan mood kamu dengan produk terbaik.
             </p>
 
-            <div className="mt-6 h-2 overflow-hidden rounded-full bg-second">
+            <div className="mt-6 h-2 overflow-hidden rounded-full bg-fern-frost">
               <div className="h-full w-1/2 rounded-full bg-ternary animate-[loadingSlide_1.4s_ease-in-out_infinite]" />
             </div>
           </div>

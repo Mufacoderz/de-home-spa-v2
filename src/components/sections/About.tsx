@@ -9,10 +9,10 @@ export default function About() {
                 <div className="about-center relative pb-8 sm:pb-16">
                     <div className="about-bg bg-second px-6 py-10 sm:px-10 sm:py-14 lg:px-15 lg:py-20 h-120.5">
                         <div className="w-full lg:w-1/2 flex flex-col gap-2">
-                            <div className="about-head font-playfair text-main text-[40px] sm:text-[55px] lg:text-[64px]">
+                            <div className="about-head font-playfair text-fern-deep text-[40px] sm:text-[55px] lg:text-[64px]">
                                 Tentang Kami
                             </div>
-                            <div className="about-text font-poppins text-second text-[14px] sm:text-[16px] lg-[18px] xl:text-[20px]  sm:pr-20">
+                            <div className="about-text font-poppins text-fern-mid text-[14px] sm:text-[16px] lg-[18px] xl:text-[20px]  sm:pr-20">
                                 Di Fern Aromatics, kami percaya aroma bisa mengubah suasana ruang dan perasaanmu. Kami meracik candle, diffuser, room spray, dan roll-on dari bahan alami pilihan — biar setiap sudut rumah terasa lebih hidup dan tenang.
                             </div>
                            

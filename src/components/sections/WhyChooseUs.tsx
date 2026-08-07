@@ -192,7 +192,7 @@ export default function WhyChooseUs() {
           {...fadeUp}
           className="mb-16 text-center"
         >
-          <h2 className="font-playfair text-[48px] font-medium tracking-tight text-main md:text-5xl">
+          <h2 className="font-playfair text-[48px] font-medium tracking-tight text-fern-deep md:text-5xl">
             Kenapa Pilih Kami?
           </h2>
         </motion.div>
@@ -220,15 +220,15 @@ export default function WhyChooseUs() {
                   />
                 )}
 
-                <div className="mb-5 text-main">
+                <div className="mb-5 text-fern-deep">
                   <Icon size={52} strokeWidth={1.8} />
                 </div>
 
-                <h3 className="mb-3 text-2xl font-bold tracking-tight text-main">
+                <h3 className="mb-3 text-2xl font-bold tracking-tight text-fern-deep">
                   {item.heading}
                 </h3>
 
-                <p className="max-w-60 text-base leading-relaxed text-fern-soft/80">
+                <p className="max-w-60 text-base leading-relaxed text-fern-mid">
                   {item.text}
                 </p>
               </motion.div>

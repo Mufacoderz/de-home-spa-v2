@@ -103,7 +103,7 @@ export default function RecommendationCard({
         text-[11px]
         font-semibold
         tracking-wide
-        text-fern-glow2
+        text-fern-mid
       "
               >
                 FERN RECOMMENDATION
@@ -131,7 +131,7 @@ export default function RecommendationCard({
         font-poppins
         text-[11px]
         font-semibold
-        text-fern-petal2
+        text-white
       "
               >
                 {selectedTreatment.level}
@@ -148,7 +148,7 @@ export default function RecommendationCard({
         font-poppins
         text-[11px]
         font-medium
-        text-fern-mid2
+        text-fern-mid
       "
               >
                 {selectedTreatment.area}
@@ -181,7 +181,7 @@ export default function RecommendationCard({
               text-[20px]
               font-bold
               leading-snug
-              text-main
+              text-fern-deep
             "
           >
             {selectedTreatment.nama}
@@ -195,7 +195,7 @@ export default function RecommendationCard({
               font-poppins
               text-[13px]
               leading-relaxed
-              text-fern-mid2
+              text-fern-mid
             "
           >
             Produk ini dipilih berdasarkan
@@ -220,7 +220,7 @@ export default function RecommendationCard({
               font-poppins
               text-sm
               font-semibold
-              text-fern-petal2
+              text-white
               shadow-[2px_3px_0px_0px_var(--fern-frost2)]
               transition-all
               duration-150

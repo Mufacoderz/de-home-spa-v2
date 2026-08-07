@@ -8,7 +8,7 @@ export default function ButtonReservasi({ children }: ButtonProps) {
   return (
     <Link
       href="/flow"
-      className="relative overflow-hidden inline-flex items-center justify-center rounded-xl border-2 border-fern-mid hover:border-transparent bg-transparent px-10 py-4 font-poppins text-[16px] font-semibold text-main shadow-lg transition-all duration-300 hover:scale-[1.03] hover:bg-fern-mid hover:text-white group"
+      className="relative overflow-hidden inline-flex items-center justify-center rounded-xl border-2 border-fern-mid hover:border-transparent bg-transparent px-10 py-4 font-poppins text-[16px] font-semibold text-fern-deep shadow-lg transition-all duration-300 hover:scale-[1.03] hover:bg-fern-mid hover:text-white group"
     >
       {/* efek kilap on hover */}
       <span className="pointer-events-none absolute inset-0 overflow-hidden rounded-xl">

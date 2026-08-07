@@ -215,7 +215,7 @@ export default function ChatShell() {
                                 <button
                                     key={item}
                                     onClick={() => handleQuickSuggestion(item)}
-                                    className="rounded-full border border-thera bg-thera-surface px-3 py-2 font-poppins text-xs text-thera transition hover:bg-ternary hover:text-ternary"
+                                    className="rounded-full border border-thera bg-thera-surface px-3 py-2 font-poppins text-xs text-thera transition hover:bg-ternary hover:text-white"
                                 >
                                     {item}
                                 </button>

@@ -25,8 +25,8 @@ export default function ChatInput({
           value={input}
           onChange={onChange}
           rows={1}
-          placeholder="Ceritakan keluhanmu..."
-          className="max-h-28 min-h-10 flex-1 resize-none bg-transparent px-3 py-2 font-poppins text-sm text-main outline-none placeholder:text-second/60"
+          placeholder="Ceritakan mood atau suasana yang kamu mau..."
+          className="max-h-28 min-h-10 flex-1 resize-none bg-transparent px-3 py-2 font-poppins text-sm text-fern-deep outline-none placeholder:text-fern-mid/70"
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) {
               e.preventDefault();
@@ -38,7 +38,7 @@ export default function ChatInput({
         <button
           onClick={onSend}
           disabled={loading || !input.trim()}
-          className="flex h-10 w-10 items-center justify-center rounded-xl bg-ternary text-ternary transition hover:scale-[1.04] disabled:cursor-not-allowed disabled:opacity-50"
+          className="flex h-10 w-10 items-center justify-center rounded-xl bg-ternary text-white transition hover:scale-[1.04] disabled:cursor-not-allowed disabled:opacity-50"
           aria-label="Kirim pesan"
         >
           {loading ? (

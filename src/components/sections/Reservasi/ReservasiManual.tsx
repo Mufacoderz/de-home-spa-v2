@@ -92,7 +92,7 @@ export default function ReservasiManual() {
                   )}
 
                   <span
-                    className={`relative z-10 ${isActive ? "text-ternary" : "text-fern-deep"
+                    className={`relative z-10 ${isActive ? "text-white" : "text-fern-deep"
                       }`}
                   >
                     {TAB_LABEL[kat]}

@@ -34,7 +34,7 @@ export default function Testimoni() {
       <div className="kiri w-full lg:w-[40%] flex flex-col justify-center">
 
 
-        <div className="rating-angka font-poppins text-main text-[100px] lg:text-[128px] text-center leading-none">
+        <div className="rating-angka font-poppins text-fern-deep text-[100px] lg:text-[128px] text-center leading-none">
           4.8
         </div>
 
@@ -48,7 +48,7 @@ export default function Testimoni() {
           ))}
         </div>
 
-        <div className="rating-jumlah font-poppins text-main text-center mt-2 mb-8">
+        <div className="rating-jumlah font-poppins text-fern-deep text-center mt-2 mb-8">
           1200+ ulasan
         </div>
 
@@ -58,7 +58,7 @@ export default function Testimoni() {
               key={item.star}
               className="grid grid-cols-[16px_1fr] items-center gap-3"
             >
-              <span className="text-sm text-main">{item.star}</span>
+              <span className="text-sm text-fern-deep">{item.star}</span>
 
               <div className="h-2.5 w-full overflow-hidden rounded-full bg-fern-frost3">
                 <div
@@ -89,7 +89,7 @@ export default function Testimoni() {
                   ))}
                 </div>
 
-                <p className="text-main text-center font-poppins italic leading-relaxed">
+                <p className="text-fern-deep text-center font-poppins italic leading-relaxed">
                   {item.text}
                 </p>
               </div>
@@ -101,11 +101,11 @@ export default function Testimoni() {
                 />
 
                 <div>
-                  <div className="font-poppins text-main font-semibold text-sm">
+                  <div className="font-poppins text-fern-deep font-semibold text-sm">
                     {item.name}
                   </div>
 
-                  <div className="text-xs text-main/60">
+                  <div className="text-xs text-fern-mid">
                     Pelanggan
                   </div>
                 </div>

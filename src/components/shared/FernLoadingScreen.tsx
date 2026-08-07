@@ -187,7 +187,7 @@ export default function FernLoadingScreen({
             text-2xl
             font-bold
             tracking-wide
-            text-fern-main
+            text-fern-deep
           "
         >
           {title}
@@ -212,7 +212,7 @@ export default function FernLoadingScreen({
               text-[10px]
               uppercase
               tracking-[0.2em]
-              text-fern-gold
+              text-fern-mid
             "
           >
             Sedang Memuat

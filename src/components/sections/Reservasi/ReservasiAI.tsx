@@ -11,16 +11,16 @@ export default function ReservasiAI() {
         <div className="kiri w-full lg:w-[55%]">
           <div className="mb-8 inline-flex items-center gap-3 rounded-[15px] border-2 border-fern-gold bg-fern-frost px-5 py-3">
             <Sparkles className="h-7 w-7 fill-fern-gold text-fern-gold" />
-            <span className="font-poppins text-[18px] font-semibold text-second md:text-[20px]">
+            <span className="font-poppins text-[18px] font-semibold text-fern-deep md:text-[20px]">
               Rekomendasi Fern
             </span>
           </div>
 
-          <h2 className="mb-4 font-poppins text-[24px] font-bold uppercase leading-tight text-second md:text-[40px]">
+          <h2 className="mb-4 font-poppins text-[24px] font-bold uppercase leading-tight text-fern-deep md:text-[40px]">
             Bingung Pilih Produk?
           </h2>
 
-          <p className="mb-8 max-w-175 font-poppins text-[20px] leading-relaxed text-second md:text-[28px]">
+          <p className="mb-8 max-w-175 font-poppins text-[20px] leading-relaxed text-fern-deep md:text-[28px]">
             Pilih cara yang paling nyaman: jawab cepat lewat panduan singkat,
             atau ngobrol langsung dengan Fern AI.
           </p>

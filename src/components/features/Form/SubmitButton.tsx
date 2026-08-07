@@ -405,7 +405,7 @@ Ukuran: ${durasi} ml
             type="button"
             onClick={handleOrder}
             disabled={loading}
-            className="w-full h-12 rounded-md bg-fern-glow3 text-white disabled:opacity-50"
+            className="w-full h-12 rounded-md bg-ternary text-white disabled:opacity-50"
           >
             {loading ? "Memproses..." : "Pesan Sekarang!"}
           </button>

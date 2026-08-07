@@ -21,7 +21,7 @@ export default function TypingIndicator() {
             font-poppins
             text-[11px]
             font-medium
-            text-fern-glow2
+            text-fern-mid
           "
         >
           Fern

@@ -35,10 +35,10 @@ export default function ChatHeader({ onBack, onNewChat }: Props) {
             </div>
 
             <div className="min-w-0 flex-1">
-                <h1 className="font-playfair text-2xl font-bold leading-none text-main">
+                <h1 className="font-playfair text-2xl font-bold leading-none text-fern-deep">
                     Fern AI
                 </h1>
-                <p className="mt-1 truncate font-poppins text-xs text-second">
+                <p className="mt-1 truncate font-poppins text-xs text-fern-mid">
                     Online • Konsultasi aroma Fern Aromatics
                 </p>
             </div>
@@ -64,7 +64,7 @@ export default function ChatHeader({ onBack, onNewChat }: Props) {
     shadow-sm
     transition-all
     hover:bg-ternary
-    hover:text-ternary
+    hover:text-white
     active:scale-95
   "
             >
